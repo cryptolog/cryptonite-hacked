@@ -80,7 +80,7 @@ ED25519_FN(ed25519_sign) (const unsigned char *m, size_t mlen, const ed25519_sec
 	/* S = (r + H(R,A,m)a) */
 	add256_modm(S, S, r);
 
-	/* S = (r + H(R,A,m)a) mod L */	
+	/* S = (r + H(R,A,m)a) mod L */
 	contract256_modm(RS + 32, S);
 }
 
